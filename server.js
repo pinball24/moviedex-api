@@ -20,8 +20,8 @@ app.use(function validateBearerToken(req, res, next) {
 app.get('/movie', function handleGetMovie(req, res) {
     let response = MOVIEDEX
 
-    console.log(response = response.filter(genre => genre.genre))
-
+    response = response.forEach(res => res.genre)
+    console.log(response)
     res.send(response)
 })
 
